@@ -76,12 +76,12 @@ explore: +order_items {
 ## Task 3 — Extend a View (Handling PII Data)
 
 **What this solves:**  
-Separates sensitive user data (PII) into a dedicated, extendable view to support controlled access and better data governance.
+Separates sensitive user data (PII) into a dedicated, extendable view to support controlled access and better data governance. Fill in the correct Challenge name provided by Google Cloud.
 
-### File: `views/user_pii_challenge_ltzq.view.lkml`
+### File: `views/user_pii_challenge_zzzz.view.lkml`
 
 ```lookml
-view: user_pii_challenge_ltzq {
+view: user_pii_challenge_zzzz {
   extension: required
 
   dimension: first_name {
@@ -127,31 +127,31 @@ view: user_pii_challenge_ltzq {
 ## Task 4 — Group Similar Fields in Views
 
 **What this solves:**  
-Improves usability in the Explore UI by organizing related fields into logical groups for easier navigation.
+Improves usability in the Explore UI by organizing related fields into logical groups for easier navigation. Fill in the correct Challenge Names provided by Google Cloud
 
 ### File: `views/users.view.lkml`
 
 ```lookml
 dimension: age {
-  group_label: "User Information (Challenge wF9m)"
+  group_label: "User Information (Challenge xxxx)"
   type: number
   sql: ${TABLE}.age ;;
 }
 
 dimension: city {
-  group_label: "User Information (Challenge wF9m)"
+  group_label: "User Information (Challenge xxxx)"
   type: string
   sql: ${TABLE}.city ;;
 }
 
 dimension: country {
-  group_label: "User Information (Challenge wF9m)"
+  group_label: "User Information (Challenge xxxx)"
   type: string
   sql: ${TABLE}.country ;;
 }
 
 dimension: state {
-  group_label: "User Information (Challenge wF9m)"
+  group_label: "User Information (Challenge xxxx)"
   type: string
   sql: ${TABLE}.state ;;
 }
@@ -163,25 +163,25 @@ dimension: state {
 
 ```lookml
 dimension: brand {
-  group_label: "Product Information (Challenge ONkO)"
+  group_label: "Product Information (Challenge yyyy)"
   type: string
   sql: ${TABLE}.brand ;;
 }
 
 dimension: category {
-  group_label: "Product Information (Challenge ONkO)"
+  group_label: "Product Information (Challenge yyyy)"
   type: string
   sql: ${TABLE}.category ;;
 }
 
 dimension: department {
-  group_label: "Product Information (Challenge ONkO)"
+  group_label: "Product Information (Challenge yyyy)"
   type: string
   sql: ${TABLE}.department ;;
 }
 
 dimension: name {
-  group_label: "Product Information (Challenge ONkO)"
+  group_label: "Product Information (Challenge yyyy)"
   type: string
   sql: ${TABLE}.name ;;
 }
