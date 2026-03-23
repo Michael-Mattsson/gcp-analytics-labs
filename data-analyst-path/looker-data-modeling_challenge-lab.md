@@ -1,4 +1,4 @@
-📊 Looker Data Modeling Challenge Lab
+📊 Manage Data Models in Looker: Challenge Lab
 
 This document outlines the implementation of key LookML concepts including metric creation, model optimization, data governance, and usability improvements.
 
