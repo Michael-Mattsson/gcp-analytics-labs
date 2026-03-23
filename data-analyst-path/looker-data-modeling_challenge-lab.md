@@ -4,12 +4,12 @@ This document outlines the implementation of key LookML concepts including metri
 
 ---
 
-## 🧩 Task 1 — Create LookML Objects
+## Task 1 — Create LookML Objects
 
 **What this solves:**  
 Fixes missing foundational metrics required for a partially implemented aggregate table and ensures calculations (profit, revenue) are reusable and consistent.
 
-### 📍 File: `views/order_items.view.lkml`
+### File: `views/order_items.view.lkml`
 
 **Add Dimension and Measure**
 ```lookml
@@ -31,7 +31,7 @@ measure: total_profit {
 }
 ```
 
-### 📍 File: `models/training_ecommerce.model.lkml`
+### File: `models/training_ecommerce.model.lkml`
 
 **Update Datagroup**
 ```lookml
@@ -46,12 +46,12 @@ persist_with: weekly_datagroup_Fypl
 
 ---
 
-## ⚙️ Task 2 — Create and Fix a Refinement with an Aggregate Table
+## Task 2 — Create and Fix a Refinement with an Aggregate Table
 
 **What this solves:**  
 Repairs a broken aggregate table so Looker can use precomputed weekly data for faster queries and improved performance.
 
-### 📍 File: `models/training_ecommerce.model.lkml`
+### File: `models/training_ecommerce.model.lkml`
 
 ```lookml
 explore: +order_items {
@@ -73,12 +73,12 @@ explore: +order_items {
 
 ---
 
-## 🔐 Task 3 — Extend a View (Handling PII Data)
+## Task 3 — Extend a View (Handling PII Data)
 
 **What this solves:**  
 Separates sensitive user data (PII) into a dedicated, extendable view to support controlled access and better data governance.
 
-### 📍 New File: `views/user_pii_challenge_ltzq.view.lkml`
+### New File: `views/user_pii_challenge_ltzq.view.lkml`
 
 ```lookml
 view: user_pii_challenge_ltzq {
@@ -117,7 +117,7 @@ view: user_pii_challenge_ltzq {
 }
 ```
 
-### 📍 File: `views/users.view.lkml`
+### File: `views/users.view.lkml`
 
 **Hide Sensitive Fields**
 ```lookml
@@ -128,12 +128,12 @@ Apply to relevant dimensions (e.g., name, email, location).
 
 ---
 
-## 🧱 Task 4 — Group Similar Fields in Views
+## Task 4 — Group Similar Fields in Views
 
 **What this solves:**  
 Improves usability in the Explore UI by organizing related fields into logical groups for easier navigation.
 
-### 📍 File: `views/users.view.lkml`
+### File: `views/users.view.lkml`
 
 **Group User Fields**
 ```lookml
@@ -148,7 +148,7 @@ Apply to:
 
 ---
 
-### 📍 File: `views/products.view.lkml`
+### File: `views/products.view.lkml`
 
 **Group Product Fields**
 ```lookml
